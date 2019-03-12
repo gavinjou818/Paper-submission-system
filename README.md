@@ -11,7 +11,7 @@
 
 # 安装步骤
 
-# MySQL：
+### MySQL：
 
    sudo apt-get install mysql-server
    
@@ -23,7 +23,7 @@
    
    SET GLOBAL sql_mode ='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';令
 
-# PHP：
+### PHP：
    sudo apt install php
    
    sudo apt-get install libapache2-mod-php
@@ -32,10 +32,10 @@
    
    将php.ini的 sendmail_path = "/usr/bin/msmtp -t "
 
-# Apache2:
+### Apache2:
    sudo apt install apache2	
 
-# MSMTP：
+### MSMTP：
    sudo apt-get install msmtp msmtp-mta ca-certificates
    
    配置：vim /etc/msmtprc 
@@ -80,6 +80,7 @@
 
 提交者端：http://192.168.100.22/webtree/submit
 
+具体功能demo请参考：https://shaih.github.io/websubrev/demo/0.63/index.html
 # 错误问题
 
 1. PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost'
