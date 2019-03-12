@@ -25,8 +25,11 @@
 
 # PHP：
    sudo apt install php
+   
    sudo apt-get install libapache2-mod-php
+   
    sudo apt-get install php7.2-fpm php7.2-mysql php7.2-common
+   
    将php.ini的 sendmail_path = "/usr/bin/msmtp -t "
 
 # Apache2:
@@ -34,21 +37,36 @@
 
 # MSMTP：
    sudo apt-get install msmtp msmtp-mta ca-certificates
+   
    配置：vim /etc/msmtprc 
+   
       account 163
+      
       tls on
+      
       tls_certcheck off
+      
       tls_starttls off
+      
       host smtp.163.com
+      
       port 465
+      
       auth login
+      
       user xxxx@163.com
+      
       password 密码
+      
       from xxxx@163.com
+      
       logfile /var/log/msmtp/msmtp.log
+      
       account default : 163
+      
    测试：
-      echo "Subject:测试"|msmtp -d xxx@xx.com	
+      echo "Subject:测试"|msmtp -d xxx@xx.com
+      
 解压文件包放到/var/www/html目录下
 将webtree提取出来
 然后chmod o+w init subs chair
